@@ -45,8 +45,9 @@ export class AppComponent implements OnInit {
               borderRadius: '50px',
               ease: myEase
             },"<")
-            .to('.text-about', {
+            .to('.text-about,.text-portfolio', {
               opacity: 0,
+              y: '*',
               ease: myEase
             }, "<")
             .to('.header', {
@@ -87,7 +88,15 @@ export class AppComponent implements OnInit {
       },
     });
   }
-  about() {
+  about(text:string) {
+    this.animation(text);
+  }
+
+  portfolio(text:string){
+    this.animation(text);
+  }
+  
+  animation(text:string){
     const TL = gsap.timeline();
     TL
       .to('.box-container', {
@@ -99,8 +108,8 @@ export class AppComponent implements OnInit {
         borderRadius: '10px',
         ease: myEase
       },"<")
-      .to('.text-about', {
-        bottom: '200px',
+      .to(`.${text}`, {
+        y: '-200px',
         opacity: 1,
         ease: myEase
       }, "<")
@@ -118,5 +127,4 @@ export class AppComponent implements OnInit {
         padding: '0 5%',
       }, "<")
   }
-
 }

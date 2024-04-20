@@ -2,12 +2,13 @@
   <div
     class="box-container rounded-b-lg h-full w-full fixed top-[0%] left-[50%] -translate-x-[50%] -translate-y-[0%] flex items-center justify-center">
     <img class="header_img w-full h-full object-cover absolute top-0" src="assets/Rectangle 96.png" alt="">
-    <div class="text-about text-[#fff] text-[100px] absolute -bottom-[100px] opacity-1">About</div>
+    <div class="text-about text-[#fff] text-[100px] absolute -bottom-[100px] opacity-0">About</div>
+    <div class="text-portfolio text-[#fff] text-[100px] absolute -bottom-[100px] opacity-0">Portfolio</div>
     <div class="header flex items-center justify-between text-[#fff] absolute top-10 w-full px-40">
       <div class="flex items-center gap-4">
-        <div class="about p-3 font-bold rounded-[50px] bg-[rgba(0,0,0,.15)] cursor-pointer" (click)="about()">About
+        <div class="about p-3 font-bold rounded-[50px] bg-[rgba(0,0,0,.15)] cursor-pointer" (click)="about('text-about')">About
         </div>
-        <div class="p-3 font-bold rounded-[50px] bg-[rgba(0,0,0,.15)] cursor-pointer">Portfolio</div>
+        <div class="p-3 font-bold rounded-[50px] bg-[rgba(0,0,0,.15)] cursor-pointer" (click)="portfolio('text-portfolio')">Portfolio</div>
         <div class="p-3 font-bold rounded-[50px] bg-[rgba(0,0,0,.15)] cursor-pointer">Team</div>
         <div class="p-3 font-bold rounded-[50px] bg-[rgba(0,0,0,.15)] cursor-pointer">Content</div>
       </div>
@@ -44,7 +45,7 @@
       Quo consequatur animi, aspernatur eius non quod minus vero voluptate accusamus, omnis, amet laboriosam magnam.
     </div>
     <div>
-      <img src="assets/battery-dynamic-gradient.png" alt="">
+      <img src="assets/image 1 (1).png" alt="">
     </div>
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ut, aut rerum dignissimos quis adipisci.
